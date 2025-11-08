@@ -7,10 +7,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <title>Site Entre Livros</title>
 </head>
 <body>
         <div class="centralPart">
+
+        <div class="logo">
+            <br><br><br><br><br><br><br><br><br><br><br><h1>Entre Livros</h1>
+        </div>
         <nav>
                 <div class="optionsNav">
             <ul>
@@ -26,49 +35,75 @@
                     </ul>
                 </div>
                 </li>
-
-                <li><a href="#">Como foi feito</a></li>
-                <li><a href="#">Plataformas</a></li>
-                <li><a href="#">Quem somos?</a></li>
+                <div class="adaptacao">
+                    <li><a href="#">Como foi feito</a></li>
+                    <li><a href="#">Plataformas</a></li>
+                    <li><a href="#">Quem somos?</a></li>
+                </div>
             </ul>
         </div>
         </nav>
 
         <div class="exibitionCard">
-            <div class="ICImage">
+            <div class="ICImg">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://static.sbt.com.br/noticias/images/261472.jpg"></div>
+                    <div class="swiper-slide"><img src="https://f.i.uol.com.br/fotografia/2017/11/28/15118903175a1d9d8d7f88f_1511890317_3x2_lg.jpg"></div>
+                    <div class="swiper-slide"><img src="https://vejasp.abril.com.br/wp-content/uploads/2016/11/6415_marquito-sp-vereador-2013-64-jpg.jpeg?quality=70&strip=info&resize=1080,565&crop=1"></div>
+                </div>
+  
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+        </div>
             </div>
             <div class="ICIText">
-   
+                <p>E se no dia de sua formatura você descobrisse que os professores fossem levados para dentro de LIVROS?</p>
             </div>
         </div>
         </div>
 
     <section>
-        <div class="about"></div>
-        <div class="about"></div>
-        <div class="about"></div>
+        <div class="about">
+            <img src="https://i.postimg.cc/65HhHK92/espinhotarado-gif.gif">
+            <p>O jogo se encontra em disponibilidade no <b>Itch.IO</b> e, por sua completude, o motor gráfico usado foi a Unity Engine.</p>
+        </div>
+
+        <div class="about">
+            <img src="https://i.postimg.cc/85Wy30yV/ironball.gif">
+            </video>
+
+            <p>Explore dois mundos distintos com 5 fases!</p>
+        </div>
+        
+        <div class="about">
+            <img src="https://i.postimg.cc/G2DMwgQC/imagem-2025-11-06-191455589.png">
+
+            <p>Jogo totalmente compatível com controle e teclado!</p>
+        </div>
     </section>
     
     <article>
         <div class="about" id="developers">
             <h1>Desenvolvedores</h1>
             <ul>
-                <li>Programador: <a href="https://github.com/v3xxbr" target="_blank">Brito</a></li>
+                <li>Programador: <a href="https://github.com/v3xxbr" target="_blank"><br>Arthur Brito</a></li>
                 <li>Artista(s): 
-                    <a href="https://github.com/Tyvernus" target="_blank">Breno Trigo</a>
-                    <br>
+                    <a href="https://github.com/Tyvernus" target="_blank"><br>Breno Trigo</a>
                     <a href="https://github.com/" target="_blank">Elisabella Sabbah</a>
                 </li>
                 <li>Designer(s): 
-                    <a href="https://github.com/" target="_blank">Gabriel Valones</a>
-                    <br>
+                    <a href="https://github.com/" target="_blank"><br>Gabriel Valones</a>
                     <a href="https://github.com/angelicasouzart" target="_blank">Angélica Francisconi</a>
                 </li>
-                <li>Musicista: <a href="https://github.com/">Beatriz Primos</a></li>
+                <li>Musicista: <a href="https://github.com/" target="_blank"><br>Beatriz Primos</a></li>
                 <li><a href="https://britao.itch.io/squaredb-project" target="_blank" class="btn btn-1">Acessar jogo</a></li>
             </ul>
         </div>
     </article>
+
+    
 
     <footer>
         <h1>Todos os Direitos Reservados SquaredB ©</h1>
@@ -78,4 +113,13 @@
         <p>São Paulo, 2025</p>
     </footer>
 </body>
+
+<script>
+        new Swiper('.swiper', {
+        loop: true,
+        autoplay: { delay: 3000 },
+        pagination: { el: '.swiper-pagination' },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+    </script>
 </html>

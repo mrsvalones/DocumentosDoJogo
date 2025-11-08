@@ -3,7 +3,7 @@ body{
     padding:0;
     height: 100vh;
 
-    background-image: url('imgs/shipBackground.jpg');
+    background-image: url('https://i.postimg.cc/GpvTbYLp/ship-Background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -17,59 +17,59 @@ body{
     width:100%;
     height: 100%;
     display: flex;
-    
     flex-direction: column;
     align-items: center;
 }
 
+.logo{
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    z-index: 3;
+    background: url(logo_livro_atualizado.png) no-repeat;
+    background-size: contain;
+    width: 170px;
+    height: 170px;
+    display: flex;
+}
+
+
 nav{
     position: relative;
-    width: 50%;
+    width: 60%;
     display: flex;
-
-    margin-top: 5%;
-    height:10%;
-
+    margin: 5% 0;
+    padding: 10px 0;
     box-sizing: border-box;
     text-align: center;
     align-items: center;
-
     background-color: orange;
     border: 2px solid black;
 }
 
 .optionsNav{
-    margin:0;
-    padding:0;
     display: flex;
-    position:relative;
-    align-items: center;
     justify-content: center;
-    height:100%;
+    align-items: center;
 }
 
 .optionsNav ul{
     display: flex;
+    list-style-type: none;
     margin: 0;
     padding:0;
-    align-items: center;
-    justify-content: center;
+    gap: 20px;
 }
 
 .optionsNav a{
     text-decoration: none;
-    color: gray;
+    color: black;
+    font-size: 12px;
 }
 
-.optionsNav li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 20px;
-}
+
 
 .dropdown{
-    display: inline-block;
     position: relative;
 }
 
@@ -77,27 +77,24 @@ nav{
     display: none;
     top: 100%;
     left: 0;
+    position: absolute;
     border-radius: 5%;
     border: 2px solid black;
     z-index: 10;
     background-color: antiquewhite;
-    position: absolute;
-    width: max-content;
-    height: auto;
 }
 
 .dropdownContent ul{
     display: flex;
     margin:0;
-    padding:0;
+    padding:10px;
     list-style: none;
     border: 2px solid orange;
     flex-direction: column;
 }
 
 .dropdownContent li{
-    border: 3px hotpink solid;
-    height: auto;
+    margin: 5px 0;
 }
 
 .dropdown:hover .dropdownContent{
@@ -105,59 +102,84 @@ nav{
 }
 
 .exibitionCard{
-    position: relative;
-    width: 50%;
+    width: 70%;
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
+    flex-wrap: wrap;
     align-items: center;
-
     margin-top: 5%;
-    height:20%;
-
-    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
     background-color: whitesmoke;
-    height: 50%;
 }
 
 .ICImg{
-    width:50%;
-    height: 100%;
+    flex: 1 1 60%;
 }
 
 .ICImg img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
+
+.ICIText{
+    flex: 1 1 35%;
+    padding: 20px;
+    text-align: justify;
+    
+}
+
 
 section{
     display: flex;
-    justify-content: space-between;
-    height: 60%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 10% 0
+
 }
 
 .about{
-    margin: 0 5% 0 5%;
-    background-color:azure;
-    width: 25%;
+    width: 28%;
+    min-width: 250px;
+    background-color: black;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 3%;
-    box-sizing: border-box;
+    color:whitesmoke;
     text-align: center;
-    height:100%;
 }
+
+.about img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
 
 article{
     display: flex;
-    margin-top: 15%;
-    height: 60%;
     justify-content: center;
-    align-items: center;
+    margin: 10% 0;
 }
 
 #developers{
-    margin: 40% 0 40% 0;
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+}
+
+#developers h1{
+    color: rgb(43, 60, 9);
+}
+
+#developers li{
+    margin: 15px 0;
+    color: blue;
 }
 
 .btn{
@@ -186,30 +208,96 @@ article{
         transition: transform 0.5s;
     }
 
-.about ul{
-    list-style: none;
-    width: 100%;
-    height:auto;
-    margin:0;
-    padding: 0;
-}
 
-.about li{
-    margin:15%;
-}
-
-.about a{
-    text-decoration: none;
-    color: rgb(47, 5, 47);
-}
 
 footer{
     display: flex;
     margin-top: 40%;
     justify-content: center;
     align-items: center;
-    background-color: brown;
+    background-color: rgb(57, 12, 12);
     flex-direction: column;
-    height: 40%;
     color: whitesmoke;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+@media (max-width: 1024px) {
+    nav {
+        width: 80%;
+    }
+
+    .exibitionCard {
+        width: 85%;
+        flex-direction: column;
+    }
+
+    .ICIText {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    nav {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .optionsNav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .about {
+        width: 70%;
+    }
+
+    #developers {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        position: static;
+        width: 120px;
+        height: 120px;
+        margin: 20px auto;
+    }
+
+    nav {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .exibitionCard {
+        width: 95%;
+    }
+
+    .ICIText {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .about {
+        width: 90%;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 20px;
+    }
 }
